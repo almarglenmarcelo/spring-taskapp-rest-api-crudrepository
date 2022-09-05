@@ -12,16 +12,16 @@ import ch.qos.logback.classic.LoggerContext;
 
 
 
-public class TaskServiceLogger {
+public class TaskServiceLogger{
 
 	
 	@Before("todo.app.aspect.AOPExpression.findAll()")
 	public void beforeFindAllTasks(JoinPoint theJoinPoint) {
 		
-		log.info("\n=====>>> Executing @Before advice on addAccount()");
+		System.out.println("\n=====>>> Executing @Before advice on addAccount()");
 		String methodSignature = theJoinPoint.getSignature().toShortString();
 		
-		log.info("The Method: " + methodSignature);
+		System.out.println("The Method: " + methodSignature);
 		
 		
 	}
