@@ -47,7 +47,6 @@ public class TaskRestController {
 	
 	@PostMapping("task/lists")
 	public Todo saveTask(@RequestBody Todo theTask) {
-		theTask.setId(0);
 		
 		taskService.save(theTask);
 		

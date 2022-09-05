@@ -42,10 +42,9 @@ public class TaskService{
 	
 	public void save(Todo theTask) {
 		
-		Todo task = taskRepository.save(theTask);
-		System.out.println("The following task has been saved in database: ");
-		System.out.println(task);
 		
+		taskRepository.save(theTask);
+		System.out.println("Successfully updated the task with id " + theTask.getId());
 	}
 
 	
