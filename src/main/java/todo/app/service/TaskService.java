@@ -21,13 +21,13 @@ public class TaskService{
 		this.taskRepository = theTaskRepository;
 	}
 
-	public Iterable<Todo> findAllTasks() {
+	public Iterable<Todo> findAll() {
 		
 		return taskRepository.findAll();
 	}
 	
 	
-	public Optional<Todo> findTaskById(int taskId) {
+	public Optional<Todo> findById(int taskId) {
 		
 		Optional<Todo> theTask = taskRepository.findById(taskId);
 		

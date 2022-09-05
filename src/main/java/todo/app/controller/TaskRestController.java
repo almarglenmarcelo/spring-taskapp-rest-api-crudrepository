@@ -34,7 +34,7 @@ public class TaskRestController {
 	
 	@GetMapping("task/lists")
 	public Iterable<Todo> getAllTask() {
-		return  taskService.findAllTasks();
+		return  taskService.findAll();
 	}
 	
 	
@@ -42,7 +42,7 @@ public class TaskRestController {
 	
 	public Optional<Todo> getTask(@PathVariable int taskId) {
 		
-		return taskService.findTaskById(taskId);
+		return taskService.findById(taskId);
 	}
 	
 	@PostMapping("task/lists")
