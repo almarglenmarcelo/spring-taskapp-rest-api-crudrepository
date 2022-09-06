@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import todo.app.entity.Todo;
-import todo.app.exception.TaskNotFoundException;
+
 import todo.app.service.TaskService;
 
 
@@ -32,20 +32,20 @@ public class TaskRestController {
 	}
 	
 	
-	@GetMapping("task/lists")
+	@GetMapping("/lists")
 	public Iterable<Todo> getAllTask() {
 		return  taskService.findAll();
 	}
 	
 	
-	@GetMapping("task/lists/{taskId}")
+	@GetMapping("/lists/{taskId}")
 	
 	public Optional<Todo> getTask(@PathVariable int taskId) {
 		
 		return taskService.findById(taskId);
 	}
 	
-	@PostMapping("task/lists")
+	@PostMapping("/lists")
 	public Todo saveTask(@RequestBody Todo theTask) {
 		
 		taskService.save(theTask);
@@ -53,7 +53,7 @@ public class TaskRestController {
 		return theTask;
 	}
 	
-	@PutMapping("task/lists")
+	@PutMapping("lists")
 	public Todo updateTask(@RequestBody Todo theTask) {
 		
 		taskService.save(theTask);
@@ -63,7 +63,7 @@ public class TaskRestController {
 	
 	
 	
-	@DeleteMapping("task/lists/{taskId}")
+	@DeleteMapping("/lists/{taskId}")
 	public String deleteById(@PathVariable int taskId) {
 		taskService.deleteById(taskId);
 		
