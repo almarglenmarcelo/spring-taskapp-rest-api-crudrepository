@@ -10,7 +10,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 
 @SpringBootApplication
-@EnableSwagger2
+//@EnableSwagger2
 public class Application implements CommandLineRunner{
 
 	private static Logger LOG = LoggerFactory
