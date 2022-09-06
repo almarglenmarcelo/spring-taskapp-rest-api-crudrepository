@@ -4,5 +4,5 @@ DeleteSingle = http://localhost:8080/api/task/lists/9
 SaveRecord = http://localhost:8080/api/task/lists/9
 UpdateRecord = http://localhost:8080/api/task/lists/
 
-# Swagger 
+# Swagger Api Document generation
 http://localhost:8080/v2/api-docs
